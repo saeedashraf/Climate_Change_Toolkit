@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{04DC55D7-6328-4825-A327-C1E16786B869}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CCT</RootNamespace>
+    <AssemblyName>CCT</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Access, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\officeDll\Microsoft.Office.Interop.Access.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\officeDll\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="office, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\officeDll\office.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AllInOneForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllInOneForm.designer.cs">
+      <DependentUpon>AllInOneForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CCDA\AnalyzeManager.cs" />
+    <Compile Include="CCDA\CCDA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CCDA\CCDA.designer.cs">
+      <DependentUpon>CCDA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CCDA\PpuManager.cs" />
+    <Compile Include="CctMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CctMain.Designer.cs">
+      <DependentUpon>CctMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Currection\CorrectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Currection\CorrectionForm.designer.cs">
+      <DependentUpon>CorrectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileCreator\FileCreator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileCreator\FileCreator.designer.cs">
+      <DependentUpon>FileCreator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CMAA\CMAA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMAA\CMAA.designer.cs">
+      <DependentUpon>CMAA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCDAll\GCDAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCDAll\GCDAll.designer.cs">
+      <DependentUpon>GCDAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCD\GCDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCD\GCDForm.designer.cs">
+      <DependentUpon>GCDForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs" />
+    <Compile Include="Properties\Settings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="StaticData.cs" />
+    <EmbeddedResource Include="AllInOneForm.resx">
+      <DependentUpon>AllInOneForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CCDA\CCDA.resx">
+      <DependentUpon>CCDA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CctMain.resx">
+      <DependentUpon>CctMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Currection\CorrectionForm.resx">
+      <DependentUpon>CorrectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileCreator\FileCreator.resx">
+      <DependentUpon>FileCreator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMAA\CMAA.resx">
+      <DependentUpon>CMAA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCDAll\GCDAll.resx">
+      <DependentUpon>GCDAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCD\GCDForm.resx">
+      <DependentUpon>GCDForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx" />
+    <None Include="CCT.pdf" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CCDA\shutterstock_75311899.ico" />
+    <Content Include="positionDB.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\BCSD.png" />
+    <Content Include="Resources\CCDA.png" />
+    <Content Include="Resources\cct-background.jpg" />
+    <Content Include="Resources\data.png" />
+    <Content Include="Resources\GCDM.png" />
+    <Content Include="Resources\sicd 2.png" />
+    <Content Include="Resources\SICD.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
